@@ -1,9 +1,9 @@
 <div class="am-navbar-left">
-  <ng-container #leftView></ng-container>
+  <ng-content select="[navbarLeft]"></ng-content>
 </div>
 <div class="am-navbar-title">
-  <ng-container #titleView></ng-container>
+  <ng-content select="[navbarTitle]" #title></ng-content>
 </div>
 <div class="am-navbar-right">
-  <ng-container #rightView></ng-container>
+  <ng-content select="[navbarRight]"></ng-content>
 </div>
