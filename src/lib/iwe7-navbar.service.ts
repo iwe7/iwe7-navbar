@@ -1,6 +1,6 @@
 import { Injectable, Optional } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Iwe7LayoutService } from 'iwe7-layout';
+import { Iwe7HeaderService } from 'iwe7-layout';
 
 @Injectable()
 export class Iwe7NavbarService {
@@ -8,20 +8,20 @@ export class Iwe7NavbarService {
     shown$: BehaviorSubject<boolean> = new BehaviorSubject(this.shown);
     constructor(
         @Optional()
-        private layout: Iwe7LayoutService
+        private header: Iwe7HeaderService
     ) { }
 
     show() {
         this.shown = true;
-        if (this.layout) {
-            this.layout.showHeader();
+        if (this.header) {
+            this.header.show();
         }
     }
 
     hide() {
         this.shown = false;
-        if (this.layout) {
-            this.layout.hideHeader();
+        if (this.header) {
+            this.header.hide();
         }
     }
 }
