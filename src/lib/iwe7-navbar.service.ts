@@ -13,15 +13,9 @@ export class Iwe7NavbarService {
 
     show() {
         this.shown = true;
-        if (this.header) {
-            this.header.show();
-        }
     }
 
     hide() {
         this.shown = false;
-        if (this.header) {
-            this.header.hide();
-        }
     }
 }
